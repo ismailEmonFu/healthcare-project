@@ -21,14 +21,12 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Nav className="justify-content-end">
                             <Nav.Link href="/home">Home</Nav.Link>
-                            <Nav.Link href="/features">Features</Nav.Link>
+                            <Nav.Link href="/expertise">Expertise</Nav.Link>
+                            <Nav.Link href="/admissionGuide">Admission Guide</Nav.Link>
                             <Nav.Link href="/facilities">Facilities</Nav.Link>
                             {user?.email ?
-                                <Button onClick={logOut} variant="light">Logout</Button> :
+                                <Button onClick={logOut}>(Logout) {user?.displayName}</Button> :
                                 <Nav.Link as={Link} to="/login">Login</Nav.Link>}
-                            <Navbar.Text>
-                                <a href="#login">{user?.displayName}</a>
-                            </Navbar.Text>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

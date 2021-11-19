@@ -1,6 +1,10 @@
 import React from 'react';
 import { Carousel, CarouselItem } from 'react-bootstrap';
 
+// https://i.ibb.co/zrfw3Hz/h3.jpg
+// https://i.ibb.co/CvhfNZX/h2.jpg
+// https://i.ibb.co/gzRfmDD/h1.jpg
+
 const Banner = () => {
     return (
         <div>
@@ -8,7 +12,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=940"
+                        src="https://i.ibb.co/zrfw3Hz/h3.jpg"
                         alt="First slide"
                     />
 
@@ -16,7 +20,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg?auto=compress&cs=tinysrgb&h=500&w=1260"
+                        src="https://i.ibb.co/CvhfNZX/h2.jpg"
                         alt="Second slide"
                     />
 
@@ -25,7 +29,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images.pexels.com/photos/3769151/pexels-photo-3769151.jpeg?auto=compress&cs=tinysrgb&h=500&w=1260"
+                        src="https://i.ibb.co/gzRfmDD/h1.jpg"
                         alt="Third slide"
                     />
 

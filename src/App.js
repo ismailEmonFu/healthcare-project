@@ -12,7 +12,12 @@ import Facility from './Pages/Home/Facility/Facility';
 import Login from './Pages/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
-import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+// import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Feature from './Pages/Home/Feature/Feature';
+import Register from './Pages/Login/Register/Register';
+import Expertise from './Pages/Home/Expertise/Expertise';
+import AdmissionGuide from './Pages/Home/AdmissionGuide/AdmissionGuide';
 
 
 
@@ -38,8 +43,20 @@ function App() {
             <Route path="/aboutus">
               <AboutUs></AboutUs>
             </Route>
-            <PrivateRoute path="/facilities">
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="/facilities">
               <Facility></Facility>
+            </Route>
+            <Route path="/expertise">
+              <Expertise></Expertise>
+            </Route>
+            <Route path="/admissionGuide">
+              <AdmissionGuide></AdmissionGuide>
+            </Route>
+            <PrivateRoute path="/feature/:serviceId">
+              <Feature></Feature>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>

@@ -1,31 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Features from '../Features/Features';
+import './Facility.css';
 
 const Facility = () => {
-    const [facilities, setFacilities] = useState();
+    const [facilities, setFacilities] = useState([]);
     useEffect(() => {
         fetch('./hospital.JSON')
             .then(res => res.json())
             .then(data => setFacilities(data));
     }, [])
     return (
-        <div>
-            <h2>Our Super Facility</h2>
-            <div>
+        <>
+            <h2>We Have Super Facility</h2>
+            <div className="feature-container">
                 {
-                    facilities.map(facility => {
-                        <div>
-                            <img src={facility.img} alt="" />
-                            <h3>{facility.name}</h3>
-                            <p className="px-3">{facility.description}</p>
-                            <Link to={`/features/${facility.id}`}>
-                                <button className="btn btn-info">Take {facility.name} Service</button>
-                            </Link>
-                        </div>
-                    })
+                    facilities?.map(facility => <Features key={facility.id} facility={facility}></Features>)
                 }
             </div>
-        </div>
+        </>
     );
 };
 
